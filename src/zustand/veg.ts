@@ -1,8 +1,8 @@
-import { chickenIngredients } from "@/type";
+import { mealTYpe } from "@/type";
 import create from "zustand";
 
 interface ApiStore {
-  Vegetable: chickenIngredients[] | null;
+  Vegetable: mealTYpe[] | null;
   isLoading: boolean;
   error: string | null;
   fetchVegitable: () => Promise<void>;
