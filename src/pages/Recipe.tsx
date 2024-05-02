@@ -32,7 +32,7 @@ export const Recipe = () => {
     const typedMealDetails = mealDetails as MealWithDetailsType;
 
     return (
-        <div className="mt-20">
+        <div className="mt-20 flex flex-col justify-center items-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
                 <div className="rounded-lg overflow-hidden">
                     <img
@@ -76,7 +76,7 @@ export const Recipe = () => {
             </div>
             <h1 className="text-center text-4xl mt-5 mb-5">Watch it on youtube</h1>
             {mealDetails.strYoutube && (
-                <div className="flex justify-center">
+                <div className="flex justify-center flex-col">
                     <iframe
                         width="560"
                         height="315"
@@ -86,11 +86,16 @@ export const Recipe = () => {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>
+
+                    <a href={mealDetails.strYoutube} target="_blank" className="text-center text-2xl p-5 mb-5 underline text-blue-600">
+                        {mealDetails.strYoutube}
+                    </a>
+
                 </div>
             )}
             {mealDetails.strSource && (
                 <>
-                    <div className="text-3xl mt-10 text-center font-bold">Source:</div>
+                    <div className="text-3xl mt-5 text-center font-bold">Source:</div>
                     <p className="text-center text-2xl p-5 mb-5 underline text-blue-600">
                         <a href={mealDetails.strSource} target="_blank" className="">
                             {mealDetails.strSource}
