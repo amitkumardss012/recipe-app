@@ -34,9 +34,6 @@ export const Home = () => {
         </div>
       </div>
 
-      <h1 className="text-center mt-4 mb-5 text-xl font-bold p-5">Fariha If you are seeing this please activate your Twitter or create a new Twitter please please please, you know I'm feeling suffocated</h1>
-
-
       <h1 className="ml-5 mb-6 text-2xl font-bold font-sans">
         Catogery of Meals
       </h1>
